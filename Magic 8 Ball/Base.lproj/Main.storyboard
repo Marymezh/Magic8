@@ -16,17 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask Me Anything..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x84-Ol-gT8">
-                                <rect key="frame" x="29" y="110" width="357" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x84-Ol-gT8">
+                                <rect key="frame" x="57" y="114" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="WV4-Af-z2c"/>
+                                    <constraint firstAttribute="height" constant="100" id="im8-If-pKK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-Gc-9aC">
-                                <rect key="frame" x="116" y="608" width="183" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lnI-eP-hJx">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="AyU-Y8-TFa"/>
+                                    <constraint firstAttribute="height" constant="300" id="eOD-gX-ahL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-Gc-9aC">
+                                <rect key="frame" x="132" y="658" width="150" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="bc0-z2-nZ4"/>
+                                    <constraint firstAttribute="height" constant="80" id="nAa-EG-n3u"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="40"/>
                                 <state key="normal" title="ASK">
                                     <color key="titleColor" red="0.34408323572428545" green="0.36917050844640631" blue="0.5424003215751263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,13 +48,17 @@
                                     <action selector="AskButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SVG-ZA-k0Q"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnI-eP-hJx">
-                                <rect key="frame" x="68" y="270" width="278" height="271"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.34408323572428545" green="0.36917050844640631" blue="0.5424003215751263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="x84-Ol-gT8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="6i2-2K-zxe"/>
+                            <constraint firstItem="x84-Ol-gT8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="72Z-u1-LRJ"/>
+                            <constraint firstItem="lnI-eP-hJx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AOn-Nq-Drt"/>
+                            <constraint firstItem="Be2-Gc-9aC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yd9-uG-eSN"/>
+                            <constraint firstItem="Be2-Gc-9aC" firstAttribute="top" secondItem="lnI-eP-hJx" secondAttribute="bottom" constant="60" id="c9W-hf-4y5"/>
+                            <constraint firstItem="lnI-eP-hJx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iTz-ZD-BF3"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="lnI-eP-hJx" id="OLc-28-xjs"/>
